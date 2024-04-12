@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Function Wallpaper</title>
+    <style>
+
+        body {
+            background-color: #6667AB;
+            font-family: Arial, sans-serif;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #output{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .keyword {
+            color: #00FF00; /* Color verde para palabras clave */
+        }
+
+        .variable {
+            color: #FFA500; /* Color naranja para variables */
+        }
+    </style>
+</head>
+<body>
+    <div id="output"></div>
+    <script>
+        function updateTime() {
+            var now = new Date();
+            var days = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'];
+            var day = days[now.getDay()];
+            var hours = now.getHours();
+            var minutes = now.getMinutes();
+            var seconds = now.getSeconds();
+            var output = "<span class='publicss'>public</span> <span class='staticss'>static</span> void Main(String[] args) {<br>";
+            output += "<span class='fechacss'>Fecha:</span>" + now.toLocaleDateString() + "<br>";
+            output += "<span class='keyword'>Dia:</span> " + day + "<br>";
+            output += "<span class='keyword'>Hora:</span> " + hours + "<br>";
+            output += "<span class='keyword'>Minutos:</span> " + minutes + "<br>";
+            output += "<span class='keyword'>Segundos:</span> " + seconds + "<br>";
+            output += "}";
+            document.getElementById('output').innerHTML = output;
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+    </script>
+</body>
+</html>
