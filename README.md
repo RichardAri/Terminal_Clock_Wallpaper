@@ -1,1 +1,1 @@
-Java Function Wallpaper for Wallpaper Engine
+Wallpaper for Wallpaper Engine
